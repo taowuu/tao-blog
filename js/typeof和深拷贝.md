@@ -61,6 +61,4 @@ obj2.age = 30
 console.log(obj1.address.city)
 console.log(obj1.arr[0])
 console.log(obj1.age)
-
-
 ```
