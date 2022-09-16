@@ -260,3 +260,88 @@ div1.addEventListener('drag', throttle(function (e) {
     console.log(e.offsetX, e.offsetY)
 }))
 ```
+# 12. web 安全
+## XSS
+* 嵌入 js 获取 cookie
+* 解决：替换特殊字符
+## XSRF
+* 诱导用户点击链接执行恶意脚本
+1. 使用 post
+2. 增加 token 验证
+# 13. var let const 的区别
+1. var 有变量提升，其余没有
+2. var let 可修改，const 不能
+3. let const 有块级作用域，var 没有
+# 14. typeof 能判断哪些类型
+1. undefined string number boolean symbol
+2. object
+3. function
+# 15. 列举强制和隐式类型转换
+1. 强制：parseInt parseFloat toString
+2. 隐式：if, ==, 逻辑运算, 拼接字符串
+# 16. 手写 isEqual
+```javascript
+// 判断是否是对象或数组
+function isObject(obj) {
+    return typeof obj === 'object' && obj !== null
+}
+// 全相等（深度）
+function isEqual(obj1, obj2) {
+    if (!isObject(obj1) || !isObject(obj2)) {
+        // 值类型（注意，参与 equal 的一般不会是函数）
+        return obj1 === obj2
+    }
+    if (obj1 === obj2) {
+        return true
+    }
+    // 两个都是对象或数组，而且不相等
+    // 1. 先取出 obj1 和 obj2 的 keys ，比较个数
+    const obj1Keys = Object.keys(obj1)
+    const obj2Keys = Object.keys(obj2)
+    if (obj1Keys.length !== obj2Keys.length) {
+        return false
+    }
+    // 2. 以 obj1 为基准，和 obj2 一次递归比较
+    for (let key in obj1) {
+        // 比较当前 key 的 val —— 递归！！！
+        const res = isEqual(obj1[key], obj2[key])
+        if (!res) {
+            return false
+        }
+    }
+    // 3. 全相等
+    return true
+}
+
+// 测试
+const obj1 = {
+    a: 100,
+    b: {
+        x: 100,
+        y: 200
+    }
+}
+const obj2 = {
+    a: 100,
+    b: {
+        x: 100,
+        y: 200
+    }
+}
+// console.log( obj1 === obj2 )
+console.log( isEqual(obj1, obj2) )
+```
+# 17. split 和 join 的区别
+1. split 拆分为数组
+2. join 合并为字符串
+# 18. 数组的操作
+1. pop 从数组末尾移除一个元素并返回
+2. push 从数组末尾追加一个元素
+3. shift 头移除
+4. unshift 头添加
+5. concat 拼接两个数组为新数组
+6. map 处理每个元素并生成新数组
+7. filter 判断每个元素并生成过滤后数组
+8. slice 切片生成新数组
+9. reduce 对每一项执行回调并返回最终回调结果
+10. forEach 返回数组每个值

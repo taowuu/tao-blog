@@ -1,10 +1,16 @@
-function throttle(fn ,delay = 200) {
-    let timer = 0
-    return function() {
-        if(timer) return
-        timer = setTimeout(() => {
-            fn.apply(this, arguments)
-            timer = 0
-        }, delay)
+const obj1 = {
+    a: 100,
+    b: {
+        x: 100,
+        y: 200,
     }
 }
+const obj2 = {
+    a: 100,
+    b: {
+        x: 100,
+        y: 200,
+    }
+}
+
+// console.log()
