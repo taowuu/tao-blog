@@ -345,3 +345,27 @@ console.log( isEqual(obj1, obj2) )
 8. slice 切片生成新数组
 9. reduce 对每一项执行回调并返回最终回调结果
 10. forEach 返回数组每个值
+# 19. slice 和 splice
+* slice 切片
+* splice 剪切出来后拼接
+# 20. map parse int
+```javascript
+const res = [10, 20, 30].map(parseInt)
+console.log(res)
+
+// 拆解
+[10, 20, 30].map((num, index) => {
+    return parseInt(num, index)
+})
+```
+# 21. get post 区别
+1. get 查询，post 提交
+2. get 参数拼接在 url 上，post 在请求体
+3. post 易于防止 csrf
+# 22. call 和 apply 区别
+1. 都用来绑定 this
+2. call 参数一个个传入
+2. apply 参数通过类数组传入
+# 23. 事件代理是什么
+1. 事件监听放在父容器上可监听到子元素的触发
+2. 
