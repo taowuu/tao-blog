@@ -1,16 +1,3 @@
-const obj1 = {
-    a: 100,
-    b: {
-        x: 100,
-        y: 200,
-    }
+function trim(s) {
+    return s.replace(/^\s+/, '').replace(/\s+$/, '')
 }
-const obj2 = {
-    a: 100,
-    b: {
-        x: 100,
-        y: 200,
-    }
-}
-
-// console.log()

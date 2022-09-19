@@ -368,4 +368,118 @@ console.log(res)
 2. apply 参数通过类数组传入
 # 23. 事件代理是什么
 1. 事件监听放在父容器上可监听到子元素的触发
-2. 
+# 24. 闭包是什么
+1. 函数的执行导致函数被定义
+2. 被定义的函数内引用到了它外部的变量
+3. 导致这个变量过了生命周期还能访问到
+4. 导致变量常驻内存得不到释放
+# 25. 阻止事件冒泡和默认行为
+1. event.stopPropagation()
+2. event.preventDefault()
+# 26. 如何减少 dom 操作
+1. 缓存 dom 结果
+2. 合并多次 dom 操作
+# 27. == 和 === 的区别
+1. === 值与类型都相等
+2. == 会进行类型转化
+3. == null 唯一使用情况
+# 28. 函数声明和函数表达式区别
+1. 函数声明会预加载
+# 29. new object 和 object.create 区别
+1. object.create 可指定原型
+2. object 自带原型
+# 30. 手写 trim
+```javascript
+function trim(s) {
+    return s.replace(/^\s+/, '').replace(/\s+$/, '')
+}
+```
+# 31. 捕获异常的方式
+1. try catch
+2. onerror（压缩代码需要 sourcemap 反查
+# 32. 解析 url 参数
+```javascript
+function query(name) {
+    const search = location.search
+    const p = new URLSearchParams(search)
+    return p.get(name)
+}
+```
+# 33. url 参数转化为对象
+```javascript
+function queryToObje() {
+    const res = {}
+    const pList = new URLSearchParams(location.search)
+    pList.forEach((val, key) => {
+        res[key] = val
+    })
+    return res
+}
+```
+# 34. 手写 flat
+```javascript
+function flat(arr) {
+    // 验证 arr 中，还有没有深层数组 [1, 2, [3, 4]]
+    const isDeep = arr.some(item => item instanceof Array)
+    if (!isDeep) {
+        return arr // 已经是 flatern [1, 2, 3, 4]
+    }
+
+    const res = Array.prototype.concat.apply([], arr)
+    return flat(res) // 递归
+}
+
+const res = flat( [1, 2, [3, 4, [10, 20, [100, 200]]], 5] )
+console.log(res)
+```
+# 35. 数组去重
+```javascript
+// // 传统方式
+// function unique(arr) {
+//     const res = []
+//     arr.forEach(item => {
+//         if (res.indexOf(item) < 0) {
+//             res.push(item)
+//         }
+//     })
+//     return res
+// }
+
+// 使用 Set （无序，不能重复）
+function unique(arr) {
+    const set = new Set(arr)
+    return [...set]
+}
+
+const res = unique([30, 10, 20, 30, 40, 10])
+console.log(res)
+```
+# 36. 是否用过 requestAnimationFrame
+```javascript
+// 3s 把宽度从 100px 变为 640px ，即增加 540px
+// 60帧/s ，3s 180 帧 ，每次变化 3px
+
+const $div1 = $('#div1')
+let curWidth = 100
+const maxWidth = 640
+
+// // setTimeout
+// function animate() {
+//     curWidth = curWidth + 3
+//     $div1.css('width', curWidth)
+//     if (curWidth < maxWidth) {
+//         setTimeout(animate, 16.7) // 自己控制时间
+//     }
+// }
+// animate()
+
+// RAF
+function animate() {
+    curWidth = curWidth + 3
+    $div1.css('width', curWidth)
+    if (curWidth < maxWidth) {
+        window.requestAnimationFrame(animate) // 时间不用自己控制
+    }
+}
+animate()
+```
