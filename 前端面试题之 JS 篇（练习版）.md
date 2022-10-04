@@ -24,5 +24,18 @@ tao2.skill = ['cn', 'eng', 'jp']
 console.log('tao1: ', tao1)
 console.log('tao2: ', tao2)
 
+// tao1:  {
+//   name: 'tao1',
+//   age: 20,
+//   addr: { city: 'sz' },
+//   skill: [ 'js', 'vue', 'node' ]
+// }
+// tao2:  {
+//   name: 'tao2',
+//   age: 30,
+//   addr: { city: 'jp' },
+//   skill: [ 'cn', 'eng', 'jp' ]
+// }
+
 ```
 # 2. 
