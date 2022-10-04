@@ -5,49 +5,32 @@
     <title>test</title>
 </head>
 <body>
-    <div>
-        <span>1</span>
-        <button>2</button>
-    </div>
+    <input>
 </body>
 <script>
-const bindEvent = (elem, type, selector, fn) => {
+const throttle = (fn) => {
     // 你的代码
-    // elem 父元素, type 事件类型, selector 子元素, fn 回调
-    if (fn == null) {
-        fn = selector
-        selector = null
-    }
-    elem.addEventListener(type, event => {
-        const target = event.target
-        if (selector) {
-            // 代理绑定
-            if (target.matches(selector)) {
-                fn.call(target, event)
-                // fn(event)
-            }
-        } else {
-            // 普通绑定
-            fn.call(target, event)
-            // fn(event)
+    // 节流 -> 按规定频率来执行
+    // 一秒触发一次
+    // 
+    let timer = null
+    return function() {
+        if(timer) {
+            return
         }
-    })
+        timer = setTimeout(() => {
+            fn()
+            // 保证只执行一次
+            timer = null
+        }, 1000)
+    }
 }
 
-// 普通绑定
-const div = document.querySelector('div')
-bindEvent(div, 'click', function (event) {
-    console.log(event.target)
-    // 可代理两个元素
-    // span button
-})
+const input = document.querySelector('input')
 
-// 代理绑定
-// const div = document.querySelector('div')
-// bindEvent(div, 'click', 'button', function (event) {
-//     console.log(event.target)
-//     // 只代理 button
-//     // button
-// })
+input.addEventListener('keyup', throttle(function() {
+    console.log(input.value)
+}))
+
 </script>
 </html>

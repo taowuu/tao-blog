@@ -192,9 +192,9 @@ window.abc = function (data) {
 ```
 ## cors
 ```javascript
-Access-Control-Allow-Origin: '*'
+Access-Control-Allow-Origin: '*';
 // 接收跨越 cookie
-Access-Control-Allow-Credentials: true
+Access-Control-Allow-Credentials: true;
 ```
 # 7. 浏览器本地存储
 ## cockie
