@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <button>2</button>
+    </div>
+</body>
+<script>
+const bindEvent = (elem, type, selector, fn) => {
+    // 你的代码
+    // elem 父元素, type 事件类型, selector 子元素, fn 回调
+    if (fn == null) {
+        fn = selector
+        selector = null
+    }
+    elem.addEventListener(type, event => {
+        const target = event.target
+        if (selector) {
+            // 代理绑定
+            if (target.matches(selector)) {
+                fn.call(target, event)
+                // fn(event)
+            }
+        } else {
+            // 普通绑定
+            fn.call(target, event)
+            // fn(event)
+        }
+    })
+}
+
+// 普通绑定
+const div = document.querySelector('div')
+bindEvent(div, 'click', function (event) {
+    console.log(event.target)
+    // 可代理两个元素
+    // span button
+})
+
+// 代理绑定
+// const div = document.querySelector('div')
+// bindEvent(div, 'click', 'button', function (event) {
+//     console.log(event.target)
+//     // 只代理 button
+//     // button
+// })
+</script>
+</html>

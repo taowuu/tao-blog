@@ -92,8 +92,23 @@ function loadImg(src) {
 // }).catch(ex => console.error(ex))
 ```
 # 4. 手写事件代理
-```javascript
-function bindEvent(elem, type, selector, fn) {
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <button>2</button>
+    </div>
+</body>
+<script>
+const bindEvent = (elem, type, selector, fn) => {
+    // 你的代码
+    // elem 父元素, type 事件类型, selector 子元素, fn 回调
     if (fn == null) {
         fn = selector
         selector = null
@@ -104,28 +119,33 @@ function bindEvent(elem, type, selector, fn) {
             // 代理绑定
             if (target.matches(selector)) {
                 fn.call(target, event)
+                // fn(event)
             }
         } else {
             // 普通绑定
             fn.call(target, event)
+            // fn(event)
         }
     })
 }
 
 // 普通绑定
-const btn1 = document.getElementById('btn1')
-bindEvent(btn1, 'click', function (event) {
-    // console.log(event.target) // 获取触发的元素
-    event.preventDefault() // 阻止默认行为
-    alert(this.innerHTML)
+const div = document.querySelector('div')
+bindEvent(div, 'click', function (event) {
+    console.log(event.target)
+    // 可代理两个元素
+    // span button
 })
 
 // 代理绑定
-const div3 = document.getElementById('div3')
-bindEvent(div3, 'click', 'a', function (event) {
-    event.preventDefault()
-    alert(this.innerHTML)
-})
+// const div = document.querySelector('div')
+// bindEvent(div, 'click', 'button', function (event) {
+//     console.log(event.target)
+//     // 只代理 button
+//     // button
+// })
+</script>
+</html>
 ```
 # 5. 手写 ajax
 ```javascript
