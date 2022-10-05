@@ -137,3 +137,11 @@ console.log(res)
 # 27. `for` 为什么快于 `foreach`
 - `foreach` 每次需要初始化函数
 
+# 28. js brige
+- `js` 调用原生 `app` `api` 的格式
+- 使用 `url` `scheme` 唤醒 `app`
+
+# 29. `requestIdleCallback` 和 `requestAnimationFrame` 区别
+- `requestIdleCallback` 空闲时执行
+- `requestAnimationFrame` 每次渲染完都执行
+
