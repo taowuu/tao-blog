@@ -67,3 +67,18 @@
 - 可以在当前页面触发不同组件的渲染
 - 路由不会变化
 
+# 11. 你在使用 `Vue` 过程中遇到过哪些坑
+- 内存泄漏全局变量未销毁
+- vue2 响应式缺陷
+- 路由切换滚到顶部
+    - 缓存原页面数据和 `scrolltop`
+- `mpa+app webview`
+
+# 12. 如何统一监听 `Vue` 组件报错
+- window.onerror
+    - 识别不了 vue，可识别异步
+- errorCapture
+    - 监听下级
+    - 返回 fasle 不会向上传播
+- errorHanler
+    - 监听所有组件

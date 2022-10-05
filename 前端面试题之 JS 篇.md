@@ -154,8 +154,18 @@ console.log(res)
 - `defer` 并行下载 `js`, `dom` 解析完后再执行
 - `async` 并行下载 `js` 后立即执行
 
-# 39. prefetch 和 dns-prefetch
+# 39. `prefetch` 和 `dns-prefetch`
 - `preload` 优先加载
 - `prefetch` 空闲时加载
 - `dns-prefetch` dns 预查寻
 - `preconnect` dns 预连接
+
+# 40. 网页多 `tab` 通讯
+- `ws`
+- `localstorage`
+- `sharedworker` 
+
+# 41. 网页和 `iframe` 通讯
+1. `postMessage` 发送
+2. `on message` 接受
+
