@@ -90,6 +90,50 @@ console.log(res)
 - `try` `catch`
 - `onerror` (压缩代码需要 `sourcemap` 反查
 
-# 19. requestAnimationFrame
+# 19. `requestAnimationFrame`
 - 自动计算动画更新在 60 帧下的用时
+
+# 20. `Ajax` `Fetch` `Axios` 区别
+- 三者都用于网络请求
+- `ajax` 是异步网络请求的技术统称
+- `fetch` 是原生 api
+- `axios` 是第三方网络请求库
+
+# 21. 箭头函数缺点
+- 没有 `arguments`
+- 不能修改 `this`
+- 对象方法不能获取到 `this`
+- 无法作为构造函数
+- 上下文回调函数无法获取 `this`
+- `vue` 生命周期和 `method` 不能使用
+- `class` 可以使用 (如 `react`
+
+# 22. `for in` 和 `for of` 区别
+- in 遍历 key (不能用于 map set
+- of 遍历 val (不能用于对象
+- in 用于枚举 (一一举例出来
+- of 用于迭代 (可根据当前得到下一个
+
+# 23. `map` 和 `object` 区别
+- `map` 保持插入顺序
+- `map` `key` 可以是任意类型
+- `object` `key` 只能 数字 字符串 `symbol`
+
+# 24. `for await of`
+- 遍历异步
+
+# 25. `HTMLCollection` 和 `NodeList` 区别
+- `HTMLCollection` 与 `NodeList` 都是 `DOM` 节点的集合
+- `NodeList` 包含 `Text` `Comment`
+- `HTMLCollection` 只包 `ElementNode`
+
+# 26. JS 严格模式有什么特点
+- 全局变量必须声明
+- 禁止使用 `with`
+- 创建 `eval` 作用域
+- 禁止 `this` 指向全局作用域
+- 函数参数不能重名
+
+# 27. `for` 为什么快于 `foreach`
+- `foreach` 每次需要初始化函数
 
