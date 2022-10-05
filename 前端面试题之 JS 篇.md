@@ -145,3 +145,8 @@ console.log(res)
 - `requestIdleCallback` 空闲时执行
 - `requestAnimationFrame` 每次渲染完都执行
 
+# 30. 移动端点击有 300ms 延迟
+- 监听 touchend 使用自定义的 click
+- 并把浏览器在300ms 之后的 click 事件阻止掉
+- 现代浏览器改进 width=device-width
+
