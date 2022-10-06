@@ -1,28 +1,15 @@
-const myInstanceof = (instance, origin) => {
-    if (instance == null) return false 
+function changeArg(x) { x = 200 }
 
-    const type = typeof instance
-    if (type !== 'object' && type !== 'function') {
-        // 值类型
-        return false
-    }
-    // 为了防止修改 instance
-    let tempInstance = instance 
-    while (tempInstance) {
-        if (tempInstance.__proto__ === origin.prototype) {
-            return true // 配上了
-        }
-        // 未匹配
-        // 顺着原型链往上找
-        tempInstance = tempInstance.__proto__ 
-    }
+let num = 100
+changeArg(num)
+console.log('changeArg num', num) // 100
 
-    return false
+let obj = { name: 'tao' }
+changeArg(obj)
+console.log('changeArg obj', obj) // { name: 'tao' }
+
+function changeArgProp(x) {
+    x.name = 'sen'
 }
-
-console.info( myInstanceof({}, Object) )
-console.info( myInstanceof([], Object) )
-console.info( myInstanceof([], Array) )
-console.info( myInstanceof({}, Array) )
-console.info( myInstanceof('abc', String) )
-console.info( myInstanceof('abc', Object) )
+changeArgProp(obj)
+console.log('changeArgProp obj', obj) // { name: 'sen' }
