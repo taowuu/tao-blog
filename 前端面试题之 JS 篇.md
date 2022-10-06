@@ -169,3 +169,86 @@ console.log(res)
 1. `postMessage` 发送
 2. `on message` 接受
 
+# 42. `new` 原理
+```js
+function Student(name) {
+    this.name = name
+}
+  
+var stu = new Student('tao')
+
+function Student(name) {
+    // 创建临时对象保存 stu 的属性
+    var temp = {}
+    // 改变 this 指向
+    this = temp
+    // 改变原型
+    this.__proto__ = Student.prototype
+    this.name = name
+    // 然后返回 这个 stu
+    return this
+}
+```
+
+# 43. `Object.create` 和 `{}` 区别
+- `Object.create` 可以指定原型，创建一个空对象
+- `{}` 就相当于 `Object.create(Object.prototype)`
+
+# 44. DOM 结构转换为 vnode
+```html
+<div id="div1" style="border: 1px solid #ccc; padding: 10px;">
+    <p>一行文字<a href="xxx.html" target="_blank">链接</a></p>
+    <img src="xxx.png" alt="图片" class="image"/>
+    <button click="clickHandler">点击</button>
+</div>
+```
+```js
+const vnode = {
+    tag: 'div', // <div>
+    data: {
+        id: 'div1',
+        style: {
+            'border': '1px solid #ccc',
+            'padding': '10px'
+        }
+    },
+    children: [
+        {
+            tag: 'p', // <p>
+            data: {},
+            children: [
+                '一行文字',
+                {
+                    tag: 'a', // <a>
+                    data: {
+                        href: 'xxx.html',
+                        target: '_blank'
+                    },
+                    children: ['链接']
+                }
+            ]
+        },
+        {
+            tag: 'img', // <img>
+            data: {
+                className: 'image', // 注意，这里要用 className
+                src: 'xxx.png',
+                alt: '图片'
+            }
+        },
+        {
+            tag: 'button', // <button>
+            data: {
+                events: {
+                    click: clickHandler
+                }
+            }
+            children: ['点击']
+        }
+    ]
+}
+```
+
+# 45. 类数组
+- 可以通过下标添加属性但 `length` 不会改变
+- 原型上无 `push` 等方法
