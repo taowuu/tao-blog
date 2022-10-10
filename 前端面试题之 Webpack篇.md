@@ -6,5 +6,14 @@
 - 统一的构建流程和产出标准
 - 集成公司构建规范
 
-# 2. 
+# 2. `module` `chunk` `bundle` 区别
+- `module` 各个源码文件
+- `chunk` 多模块合并的文件
+- `bundle` 最终输出文件
+
+# 3. `loader` 和 `plugin` 区别
+- `loader` 模块转换
+- `plugin` 功能扩展
+
+# 4. 
 
