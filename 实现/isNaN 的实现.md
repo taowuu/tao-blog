@@ -8,8 +8,8 @@
     - 是 `nan` 返回 `true`
     - 不能判断 `big` `int`
 - 陷阱
-    - indexOf 不能识别数组中的 NaN
-    - includes 可以识别数组中的 NaN
+    - `indexOf` 不能识别数组中的 `NaN`
+    - `includes` 可以识别数组中的 `NaN`
 - 实现
 ```js
 function isNaNVal(val) {
