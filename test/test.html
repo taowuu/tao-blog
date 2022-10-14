@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-</head>
-<body>
-    <input>
-</body>
-<script>
-const throttle = (fn) => {
-    // 你的代码
-    // 节流 -> 按规定频率来执行
-    // 一秒触发一次
-    // 
-    let timer = null
-    return function() {
-        if(timer) {
-            return
+    <style>
+        body{
+            margin:0;
         }
-        timer = setTimeout(() => {
-            fn()
-            // 保证只执行一次
-            timer = null
-        }, 1000)
-    }
-}
+        .main{
+            min-height:100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .main .header{
+            height:100px;
+            background:pink;
+        }
+        .main .content{
+            flex-grow: 1;
+        }
+        .main .footer{
+            height:100px;
+            background:skyblue;
+        }
+    </style>
+</head>
 
-const input = document.querySelector('input')
+<body>
+    <div class="main">
+        <div class="header"></div>
+        <div class="content">
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+            <p>测试内容</p>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
 
-input.addEventListener('keyup', throttle(function() {
-    console.log(input.value)
-}))
-
-</script>
 </html>
