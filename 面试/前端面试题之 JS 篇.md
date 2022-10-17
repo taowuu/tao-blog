@@ -1,28 +1,53 @@
 # 前端面试题之 JS 篇
 
-## 1. `load` 和 `DOMContentLoaded` 区别
-- `load` -> 页面资源全部加载完
-- `DOMContentLoaded` -> `dom` 渲染完
+## `load` / `DOMContentLoaded` 区别
+```js
+document.addEventListener('load', (event) => {
+    // 该事件 不可取消 不会冒泡
+    console.log('页面资源全部加载')
+})
+```
 
-## 2. `var` `let` `const` 的区别
-- `var` 有变量提升, 其余没有
-- `var` `let` 可修改, `const` 不能
-- `let` `const` 有块级作用域, `var` 没有
+```js
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM 完全加载以及解析')
+})
+```
 
-## 3. `typeof` 能判断哪些类型
-- `undefined` `string` `number` `boolean` `symbol`
+## `var` / `let` / `const` 区别
+- `var` 有变量提升
+- `var` / `let` 可修改
+- `let` / `const` 有块级作用域
+
+## `typeof` 能判断哪些类型
+- `undefined`
+- `string`
+- `number`
+- `boolean`
+- `symbol`
 - `object`
 - `function`
 
-## 4. 列举强制和隐式类型转换
-- 强制: `parseInt` `parseFloat` `toString`
-- 隐式: `if`, `==`, 逻辑运算, 拼接字符串
+## 强制和隐式类型转换的区别
+- `parseInt` `parseFloat` `toString`
+- `条件判断` `比较运算` `逻辑运算` `拼接字符串`
 
-## 5. `split` 和 `join` 的区别
-- `split` 拆分为数组
-- `join` 合并为字符串
+## `split` / `join` 区别
+```js
+const str = 'a b c'
+// 拆分为数组
+const arr = str.split(' ')
+console.log(arr) // ["a", "", "b", "c"]
+```
 
-## 6. 数组的操作
+```js
+const arr = ["a", "b", "c"]
+// 合并为字符串
+const str = array.join(' / ')
+console.log(str) // "a / b / c"
+```
+
+## 数组的操作有哪些
 - `pop` 尾移除并返回
 - `push` 尾追加
 - `shift` 头移除
@@ -34,81 +59,81 @@
 - `reduce` 对每一项执行回调并返回最终回调结果
 - `forEach` 返回数组每个值
 
-## 7. `slice` 和 `splice` 区别
-- `slice` 切片
-- `splice` 剪切出来后拼接
-
-## 8. `map` `parseInt`
+## `slice` /  `splice` 区别
 ```js
-const res = [10, 20, 30].map(parseInt)
-console.log(res)
-// 拆解
-[10, 20, 30].map((num, index) => {
-    return parseInt(num, index)
-})
-// [ 10, NaN, NaN ]
+const arr = ["a", "b", "c"]
+// 切片
+// 不改变原数组
+const arr1 = arr.slice(0, 1)
+console.log(arr1) // ["a"]
 ```
 
-## 9. `get` 和 `post` 区别
-- `get` 查询, `post` 提交
-- `get` 参数拼接在 `url` 上, `post` 在请求体
-- `post` 易于防止 `csrf`
+```js
+const arr = ["a", "b", "c"]
+// 从下标 2 处 剪出 c 替换为 new c
+// 改变原数组
+arr.splice(2, 1, 'new c')
+console.log(arr) // ["a", "b", "new c"]
+```
 
-## 10. `call` 和 `apply` 区别
-- 都用来绑定 `this`
-- `call` 参数一个个传入
-- `apply` 参数通过类数组传入
-
-## 11. 事件代理
-- 事件监听放在父容器上可监听到子元素的触发
-
-## 12. 闭包
+## 闭包是什么
+- 从内部函数访问外部函数的作用域
 - 函数的执行导致函数被定义
 - 被定义的函数内引用到了它外部的变量
-- 导致这个变量过了生命周期还能访问到
+- 这个变量过了生命周期还能访问到
 - 导致变量常驻内存得不到释放
 
-## 13. 阻止事件冒泡和默认行为
-- `event.stopPropagation()`
-- `event.preventDefault()`
+## 如何阻止事件冒泡和默认行为
+```js
+// 阻止事件冒泡
+event.stopPropagation()
+// 阻止监听同一事件的其他事件监听器被调用
+event.stopImmediatePropagation()
+// 默认行为
+event.preventDefault()
+```
 
-## 14. 如何减少 `dom` 操作
-- 缓存 `dom` 结果
-- 合并多次 `dom` 操作
+## 减少 `DOM operation`
+- 缓存 `DOM result`
+- 合并多次 `DOM operation`
 
-## 15. `==` 和 `===` 的区别
-- `===` 需要值与类型都相等
-- `==` 会进行类型转化
-- `==` `null` 是唯一使用 `==` 情况
+## `==` / `===` 区别
+- `===` 比较类型与值
+- `==` 类型转化后比较
+- `== null` 是唯一使用 `==` 情况
 
-## 16. 函数声明和函数表达式区别
-- 函数声明会预加载
+## 函数声明和表达式的区别
+- 函数声明会在代码执行前创建
+- 会一直占用内存
+- 函数表达式代码执行时临时创建
+- 调用完后销毁
 
-## 17. `new object` 和 `object.create()` 区别
-- `object.create()` 可指定原型
-- `object` 自带原型
+## `new Object()` / `Object.create()` 区别
+- `Object.create()` 可指定原型
+- `new Object()` 默认原型为 `Object`
 
-## 18. 捕获异常
+## 捕获异常的方式
 - `try` `catch`
-- `onerror` (压缩代码需要 `sourcemap` 反查
+- `object.addEventListener("error", fn)`
+    - 压缩代码需要 `sourcemap` 反查
 
-## 19. `requestAnimationFrame`
-- 自动计算动画更新在 60 帧下的用时
+## `requestAnimationFrame`
+- 自动计算动画在 60 帧下的用时
 
-## 20. `Ajax` `Fetch` `Axios` 区别
+## `Ajax` / `Fetch` / `Axios` 区别
 - 三者都用于网络请求
-- `ajax` 是异步网络请求的技术统称
-- `fetch` 是原生 api
-- `axios` 是第三方网络请求库
+- `Ajax` 是异步网络请求的技术统称
+- `Fetch` 是原生 `API`
+- `Axios` 是第三方网络请求库
 
-## 21. 箭头函数缺点
+## 箭头函数有哪些坑
 - 没有 `arguments`
 - 不能修改 `this`
-- 对象方法不能获取到 `this`
+- 对象方法上不能获取到 `this`
 - 无法作为构造函数
 - 上下文回调函数无法获取 `this`
-- `vue` 生命周期和 `method` 不能使用
-- `class` 可以使用 (如 `react`
+- `vue` 生命周期和 `method` 内不能使用
+- `React class` 可以使用
 
 ## 22. `for in` 和 `for of` 区别
 - in 遍历 key (不能用于 map set
