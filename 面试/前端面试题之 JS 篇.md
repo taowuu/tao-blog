@@ -109,8 +109,8 @@ event.preventDefault()
 - 调用完后销毁
 
 ## `new Object()` / `Object.create()` 区别
-- `Object.create()` 可指定原型
-- `new Object()` 默认原型为 `Object`
+- `Object.create(Persion)` 可指定原型
+- `new Object()` 相当于 `Object.create(Object.prototype)`
 
 ## 捕获异常的方式
 - `try` `catch`
@@ -135,73 +135,62 @@ event.preventDefault()
 - `vue` 生命周期和 `method` 内不能使用
 - `React class` 可以使用
 
-## 22. `for in` 和 `for of` 区别
-- in 遍历 key (不能用于 map set
-- of 遍历 val (不能用于对象
-- in 用于枚举 (一一举例出来
-- of 用于迭代 (可根据当前得到下一个
+## `for in` / `for of` / `forEach` 区别
+- `for in` 遍历对象
+- `for of` / `forEach` 遍历 `Array / Map / Set / String`
 
-## 23. `map` 和 `object` 区别
-- `map` 保持插入顺序
-- `map` `key` 可以是任意类型
-- `object` `key` 只能 数字 字符串 `symbol`
+## `Map` / `Object` 区别
+- `Map` 保持插入顺序
+- `Map key` 可以是任意类型
+- `Object key` 只能 `Number/ String / Symbol`
 
-## 24. `for await of`
-- 遍历异步
+## `HTMLCollection` / `NodeList` 区别
+- `HTMLCollection` / `NodeList` 都是 `DOM` 节点的集合
+- `NodeList` 包含 `Text` / `Comment`
+- `HTMLCollection` 只包含 `ElementNode`
 
-## 25. `HTMLCollection` 和 `NodeList` 区别
-- `HTMLCollection` 与 `NodeList` 都是 `DOM` 节点的集合
-- `NodeList` 包含 `Text` `Comment`
-- `HTMLCollection` 只包 `ElementNode`
-
-## 26. JS 严格模式有什么特点
+## 严格模式有什么特点
 - 全局变量必须声明
 - 禁止使用 `with`
 - 创建 `eval` 作用域
 - 禁止 `this` 指向全局作用域
 - 函数参数不能重名
 
-## 27. `for` 为什么快于 `foreach`
-- `foreach` 每次需要初始化函数
+## `for` 为什么快于 `forEach`
+- `forEach` 每次需要初始化函数
 
-## 28. js brige
-- `js` 调用原生 `app` `api` 的格式
-- 使用 `url` `scheme` 唤醒 `app`
+## `JS Bridge` 是什么
+- 连接 `JS` 和 `Native` 的桥梁
+- 使用 `URL Scheme` 唤醒 `App`
 
-## 29. `requestIdleCallback` 和 `requestAnimationFrame` 区别
+## `requestIdleCallback` / `requestAnimationFrame` 区别
 - `requestIdleCallback` 空闲时执行
 - `requestAnimationFrame` 每次渲染完都执行
 
-## 30. 移动端点击有 `300ms` 延迟
-- 监听 touchend 使用自定义的 click
-- 并把浏览器在300ms 之后的 click 事件阻止掉
-- 现代浏览器改进 width=device-width
+## 为什么移动端点击有 300ms 延迟
+- 浏览器并不能判断用户是想要单击还是双击于是等待 `300ms`
+- 禁止缩放 
+    - `<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />`
+- 改变视口
+    - `<meta name="viewport" content="width=device-width" />`
 
-## 31. `defer` 和 `async` 区别
-- `defer` 并行下载 `js`, `dom` 解析完后再执行
-- `async` 并行下载 `js` 后立即执行
+## `defer` / `async` 区别
+- `defer` 并行下载脚本 `DOM` 解析完后再执行
+- `async` 并行下载脚本后立即执行
 
-## 39. `prefetch` 和 `dns-prefetch`
+## `prefetch` / `dns-prefetch` 区别
 - `preload` 优先加载
 - `prefetch` 空闲时加载
-- `dns-prefetch` dns 预查寻
-- `preconnect` dns 预连接
+- `dns-prefetch` DNS 预查寻
+- `preconnect` DNS 预连接
 
-## 40. 网页多 `tab` 通讯
-- `ws`
-- `localstorage`
-- `sharedworker` 
+## 网页多标签通讯方式
+- `WebSocket `
+- `localStorage`
+- `SharedWorker` 
 
-## 41. 网页和 `iframe` 通讯
-1. `postMessage` 发送
-2. `on message` 接受
-
-## 42. `new` 原理
+## `new` 原理
 ```js
-function Student(name) {
-    this.name = name
-}
-  
 var stu = new Student('tao')
 
 function Student(name) {
@@ -217,11 +206,7 @@ function Student(name) {
 }
 ```
 
-## 43. `Object.create` 和 `{}` 区别
-- `Object.create` 可以指定原型，创建一个空对象
-- `{}` 就相当于 `Object.create(Object.prototype)`
-
-## 44. DOM 结构转换为 vnode
+## `DOM` 结构转换为 `VNode`
 ```html
 <div id="div1" style="border: 1px solid ##ccc; padding: 10px;">
     <p>一行文字<a href="xxx.html" target="_blank">链接</a></p>
@@ -241,12 +226,12 @@ const vnode = {
     },
     children: [
         {
-            tag: 'p', // <p>
+            tag: 'p',
             data: {},
             children: [
                 '一行文字',
                 {
-                    tag: 'a', // <a>
+                    tag: 'a',
                     data: {
                         href: 'xxx.html',
                         target: '_blank'
@@ -256,15 +241,15 @@ const vnode = {
             ]
         },
         {
-            tag: 'img', // <img>
+            tag: 'img',
             data: {
-                className: 'image', // 注意，这里要用 className
+                className: 'image',
                 src: 'xxx.png',
                 alt: '图片'
             }
         },
         {
-            tag: 'button', // <button>
+            tag: 'button',
             data: {
                 events: {
                     click: clickHandler
@@ -276,7 +261,9 @@ const vnode = {
 }
 ```
 
-## 45. 类数组
-- 可以通过下标添加属性但 `length` 不会改变
-- 原型上无 `push` 等方法
+## 类数组是什么
+- 类似数组的对象
+- 使用数字作为属性名称
+- 需要具备 `length` 属性
+- 类数组的设计目的是只让你遍历和访问下标
 
