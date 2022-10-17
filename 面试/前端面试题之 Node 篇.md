@@ -1,10 +1,10 @@
-# 1. `node` 进程如何通信
+# 前端面试题之 Node 篇
+
+## `Node` 进程通信
 - 进程是资源分配的最小单位
 - 线程是运算调度的最小单位
-- `webworker` 开启进程
-- `child_process` `fork` 开启 `send` 传消息
+- `child_process.fork()` 父进程衍生新的子进程建立 IPC
+- `subprocess.send()` 向子进程发送消息
 - `cluster` 可开启多个进程
 
-# 2. `koa2` 的洋葱圈模型
-- 捕获再冒泡
-
+## 
