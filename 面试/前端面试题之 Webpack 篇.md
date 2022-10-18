@@ -1,6 +1,6 @@
 # 前端面试题之 Webpack 篇
 
-## 前端为何进行打包构建
+## 打包构建
 - 体积更小 加载更快
 - 编译高级语言和语法
 - 保证兼容性和错误提示
@@ -8,12 +8,12 @@
 - 统一的构建流程和产出标准
 - 集成公司构建规范
 
-## `module` / `chunk` / `bundle` 区别
+## `module` / `chunk` / `bundle`
 - `module` 各个源码文件
 - `chunk` 多模块合并的文件
 - `bundle` 最终输出文件
 
-## `loader` / `plugin` 区别
+## `loader` / `plugin`
 - `loader`
     - 运行在打包文件之前
     - 文件加载器并进行 编译 压缩 等
@@ -22,19 +22,13 @@
     - 功能扩展
     - 打包优化 资源管理 环境变量注入等
 
-## `babel` / `plugin` 区别
+## `babel` / `plugin`
 - `babel` 是语法编译工具
 - `webpack` 是打包构建工具
 
-## 如何产出 `lib`
-- `DllPlugin`
-
-## `babel-polyfill` / `babel-rentime` 区别
+## `babel-polyfill` / `babel-rentime`
 - `babel-polyfill` 新语法垫片 会污染全局
 - `babel-rentime` 不会污染全局
-
-## 如何实现懒加载
-- `import()`
 
 ## 为何 `proxy` 不能被 `polyfill`
 - `proxy` 不能用 `defineproperty` 模拟
@@ -53,8 +47,8 @@
     - `DLLPlugin` 同版本只构建一次
 
 ## 优化产出代码
-- 小图片 `base64` 编码
-- `bundle` 加 `hash`
+- 小图片 `base64`
+- `bundle-hash`
 - 懒加载
 - 提取公共代码
 - `CDN`

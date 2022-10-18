@@ -1,6 +1,6 @@
 # 前端面试题之 Vue 篇
 
-## `computed` 、 `watch` 区别
+## `computed` / `watch`
 - `computed` 用于产生新数据
 - `watch` 用于监听现有数据
 - `computed` 有缓存
@@ -46,12 +46,12 @@
 - `mounted`
 - 异步渲染开始时可能会重新 `created` 导致多次 `Ajax` 调用
 
-## `Vue / React` `Diff` 区别
+## `Vue / React` `Diff`
 - `React` 仅右移动 把原来右边挤到左边
 - `Vue2` 双端比较
 - `Vue3` 最长递增子序列作为整体
 
-## `for` 为何使用 `key`
+## `for` `key`
 - `Diff` 会根据 `key` 判断元素是否删除
 - 匹配了 `key` 可以只移动节点 性能好
 - 未匹配 `key` 则删除重新渲染 性能差
@@ -73,23 +73,20 @@
 - `errorHanler`
     - 监听所有组件
 
-## `v-show` / `v-if` 区别
+## `v-show` / `v-if`
 - `v-show` 通过 `display` 控制显示和隐藏
 - `v-if` 是组件真正的渲染和销毁
 - 频繁切换显示用 `v-show`
 
-## `v-model` 原理
+## `v-model`
 - 绑定 `input` 事件获取目标值
 - `data` 更新触发 `re render`
 
-## 为什么组件 `data` 必须是函数
+## `data` 必须是函数
 - 每个组件实际是一个类
 - 组件实例化后可以保证数据的独立
 
-## 如何将组件所有 `props` 传给子组件
-- `$props`
-
-## 多个组件有相同逻辑如何抽离
+## 相同组件逻辑抽离
 - `mixin` 变量来源不明确
 - 组合式 `API`
 
@@ -97,11 +94,11 @@
 - 加载大组件
 - 路由异步加载
 
-## 何时使用 `keep-alive`
+## `keep-alive`
 - 不需要重复渲染的组件
 - 多个静态 `tab` 切换
 
-## 何时使用 `brforeDestory`
+## `brforeDestory`
 - `$off` 解绑自定义事件
 - 清除定时器
 - 解绑自定义 `DOM` 事件
@@ -109,6 +106,6 @@
 ## `Vue` 为何是异步渲染
 - 合并多次 `data` 修改提高渲染性能
 
-## `Vuex` `action / mutation` 区别
+## `Vuex` `action / mutation`
 - `mutation` 操作是原子性 同步的
 - `action` 可包含多个 `mutation` 可异步
