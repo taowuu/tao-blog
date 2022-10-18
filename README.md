@@ -18,7 +18,7 @@
 - [isNaN 的实现](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%AE%9E%E7%8E%B0/isNaN%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
 
 ## 布局
-- [flex sticky 布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/flex%20sticky%20%E5%B8%83%E5%B1%80.md)
+- [Flex 粘性布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/flex%20sticky%20%E5%B8%83%E5%B1%80.md)
 - [flex 三列布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/flex%20%E4%B8%89%E5%88%97%E5%B8%83%E5%B1%80.md)
 - [flex 不定项居中](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/flex%20%E4%B8%8D%E5%AE%9A%E9%A1%B9%E5%B1%85%E4%B8%AD.md)
 - [flex 均分列](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/flex%20%E5%9D%87%E5%88%86%E5%88%97.md)

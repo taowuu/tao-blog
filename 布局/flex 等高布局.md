@@ -3,35 +3,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Flex 等高布局</title>
     <style>
-        /* 1. flex 等高布局 */
-        .main{
-            width:500px;
+        .main {
+            width: 500px;
             background:skyblue;
             display: flex;
+            /* 间隔化垂直居中 */
+            /* 左右相互适应 */
             justify-content: space-between;
         }
-        .main div{
-            width:100px;
+        .main div {
+            width: 100px;
             background:pink;
         }
-        /* 2. float 等高布局 */
-        /* .main{
-            width:500px;
-            background:skyblue;
-            overflow: hidden;
-        }
-        .main div{
-            width:100px;
-            background:pink;
-            float:left;
-            margin-bottom:-2000px;
-            padding-bottom:2000px;
-        }
-        .main div:nth-of-type(2){
-            float:right;
-        } */
     </style>
 </head>
 
@@ -40,10 +25,10 @@
         <div>
             <p>测试内容</p>
             <p>测试内容</p>
-            <p>测试内容</p>
-            <p>测试内容</p>
         </div>
         <div>
+            <p>测试内容</p>
+            <p>测试内容</p>
             <p>测试内容</p>
             <p>测试内容</p>
             <p>测试内容</p>
@@ -53,7 +38,5 @@
         </div>
     </div>
 </body>
-
 </html>
-
 ```

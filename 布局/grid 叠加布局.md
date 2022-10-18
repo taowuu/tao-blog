@@ -3,9 +3,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Grid 叠加布局</title>
     <style>
-        /* 1. grid 叠加布局 */
         .main {
             width: 530px;
             height: 300px;
@@ -13,22 +12,22 @@
             display: grid;
         }
         .main img {
+            /* 占据整个网格 */
             grid-area: 1/1/1/1;
         }
         .main span {
             grid-area: 1/1/1/1;
+            /* 对齐当前 grid flex */
+            /* 水平靠末尾 */
             justify-self: end;
+            /* 垂直靠末尾 */
             align-self: end;
-            margin:5px;
         }
         .main p {
             grid-area: 1/1/1/1;
+            /* 垂直居中 */
             align-self: center;
-            margin:0;
-            padding:0;
             background:rgba(0,0,0,0.5);
-            height:30px;
-            line-height: 30px;
             color:white;
         }
     </style>
@@ -36,12 +35,10 @@
 
 <body>
     <div class="main">
-        <img src="./phone.png" alt="">
+        <img src="./phone.png">
         <span>自制</span>
         <p>手机热卖中.....</p>
     </div>
 </body>
-
 </html>
-
 ```

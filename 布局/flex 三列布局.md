@@ -3,63 +3,38 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>Flex 三列布局</title>
     <style>
-        body{
-            margin:0;
-        }
-        /* 2. flex 三列布局 */
-        .main{
-            height:100vh;
+        .main {
+            /* 高度完全支撑视口 */
+            min-height:100vh;
             background:skyblue;
+            /* 默认行布局 */
             display: flex;
         }
-        .col1{
+        .col1 {
             width:200px;
             background:pink;
         }
-        .col2{
+        .col2 {
+            /* 左右固定中间自适应 */
             flex-grow: 1;
-            background:springgreen;
+            background:lightblue;
         }
-        .col3{
+        .col3 {
             width:100px;
-            background: tomato;
+            background: lightcoral;
         }
-        /* 2. float 两列布局 */
-        /* .main{
-            height:100vh;
-            background:skyblue;
-        }
-        .col1{
-            width:200px;
-            height:60%;
-            float:left;
-            background:pink;
-        }
-        .col2{
-            height:100%;
-            background:lightcoral;
-            margin-left:200px;
-            /* overflow: hidden; */
-        } */
     </style>
 </head>
 
 <body>
-    <!-- 1 -->
     <div class="main">
         <div class="col1"></div>
         <div class="col2"></div>
         <div class="col3"></div>
     </div>
-    <!-- 2 -->
-    <!-- <div class="main">
-        <div class="col1"></div>
-        <div class="col2"></div>
-    </div> -->
 </body>
-
 </html>
 
 ```
