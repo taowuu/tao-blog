@@ -1,6 +1,6 @@
 # 前端面试题之 JS 篇
 
-## `load` / `DOMContentLoaded`
+## load / DOMContentLoaded
 ```js
 document.addEventListener('load', (event) => {
     // 该事件 不可取消 不会冒泡
@@ -14,25 +14,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 })
 ```
 
-## `var` / `let` / `const`
-- `var` 有变量提升
-- `var` / `let` 可修改
-- `let` / `const` 有块级作用域
+## var / let / const
+- var 有变量提升
+- var / let 可修改
+- let / const 有块级作用域
 
-## `typeof`
-- `undefined`
-- `string`
-- `number`
-- `boolean`
-- `symbol`
-- `object`
-- `function`
+## typeo
+- undefined
+- string
+- number
+- boolean
+- symbol
+- object
+- function
 
 ## 强制 / 隐式类型转换
-- `parseInt` `parseFloat` `toString`
-- `条件判断` `比较运算` `逻辑运算` `拼接字符串`
+- parseInt / parseFloat / toString
+- 条件判断 / 比较运算 / 逻辑运算 / 拼接字符串
 
-## `split` / `join`
+## split / join
 ```js
 const str = 'a b c'
 // 拆分为数组
@@ -93,9 +93,9 @@ event.stopImmediatePropagation()
 event.preventDefault()
 ```
 
-## 减少 `DOM operation`
-- 缓存 `DOM result`
-- 合并多次 `DOM operation`
+## 减少 DOM 操作
+- 缓存 DOM 结果
+- 合并多次 DOM 操作
 
 ## `==` / `===`
 - `===` 比较类型与值
@@ -113,83 +113,83 @@ event.preventDefault()
 - `new Object()` 相当于 `Object.create(Object.prototype)`
 
 ## 捕获异常
-- `try` `catch`
+- try / catch
 - `object.addEventListener("error", fn)`
-    - 压缩代码需要 `sourcemap` 反查
+    - 压缩代码需要 sourcemap 反查
 
-## `requestAnimationFrame`
+## requestAnimationFrame
 - 自动计算动画在 60 帧下的用时
 
-## `Ajax` / `Fetch` / `Axios`
+## Ajax / Fetch / Axios
 - 三者都用于网络请求
-- `Ajax` 是异步网络请求的技术统称
-- `Fetch` 是原生 `API`
-- `Axios` 是第三方网络请求库
+- Ajax 是异步网络请求的技术统称
+- Fetch 是原生 API
+- Axios 是第三方网络请求库
 
 ## 箭头函数缺陷
-- 没有 `arguments`
-- 不能修改 `this`
-- 对象方法上不能获取到 `this`
+- 没有 arguments
+- 不能修改 this
+- 对象方法上不能获取到 this
 - 无法作为构造函数
-- 上下文回调函数无法获取 `this`
-- `vue` 生命周期和 `method` 内不能使用
-- `React class` 可以使用
+- 上下文回调函数无法获取 this
+- Vue 生命周期和 method 内不能使用
+- React class 可以使用
 
-## `for in` / `for of` / `forEach`
-- `for in` 遍历对象
-- `for of` / `forEach` 遍历 `Array / Map / Set / String`
+## for in / for of / forEach
+- for in 遍历对象
+- for of / forEach 遍历 Array / Map / Set / String
 
-## `Map` / `Object`
-- `Map` 保持插入顺序
-- `Map key` 可以是任意类型
-- `Object key` 只能 `Number/ String / Symbol`
+## Map / Object
+- Map 保持插入顺序
+- Map key 可以是任意类型
+- Object key 只能 Number/ String / Symbol
 
-## `HTMLCollection` / `NodeList`
-- `HTMLCollection` / `NodeList` 都是 `DOM` 节点的集合
-- `NodeList` 包含 `Text` / `Comment`
-- `HTMLCollection` 只包含 `ElementNode`
+## HTMLCollection / NodeList
+- HTMLCollection / NodeList 都是 DOM 节点的集合
+- NodeList 包含 Text / Comment
+- HTMLCollection 只包含 ElementNode
 
 ## 严格模式
 - 全局变量必须声明
-- 禁止使用 `with`
-- 创建 `eval` 作用域
-- 禁止 `this` 指向全局作用域
+- 禁止使用 with
+- 创建 eval 作用域
+- 禁止 this 指向全局作用域
 - 函数参数不能重名
 
-## `for` 为什么快于 `forEach`
-- `forEach` 每次需要初始化函数
+## for 为什么快于 forEach
+- forEach 每次需要初始化函数
 
-## `JS Bridge`
-- 连接 `JS` 和 `Native` 的桥梁
-- 使用 `URL Scheme` 唤醒 `App`
+## JS Bridge
+- 连接 JS 和 Native 的桥梁
+- 使用 URL Scheme 唤醒 App
 
-## `requestIdleCallback` / `requestAnimationFrame`
-- `requestIdleCallback` 空闲时执行
-- `requestAnimationFrame` 每次渲染完都执行
+## requestIdleCallback / requestAnimationFrame
+- requestIdleCallback 空闲时执行
+- requestAnimationFrame 每次渲染完都执行
 
 ## 移动端点击 300ms 延迟
-- 浏览器并不能判断用户是想要单击还是双击于是等待 `300ms`
+- 浏览器并不能判断用户是想要单击还是双击于是等待 300ms
 - 禁止缩放 
     - `<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />`
 - 改变视口
     - `<meta name="viewport" content="width=device-width" />`
 
-## `defer` / `async`
-- `defer` 并行下载脚本 `DOM` 解析完后再执行
-- `async` 并行下载脚本后立即执行
+## defer / async
+- defer 并行下载脚本 DOM 解析完后再执行
+- async 并行下载脚本后立即执行
 
-## `prefetch` / `dns-prefetch`
-- `preload` 优先加载
-- `prefetch` 空闲时加载
-- `dns-prefetch` DNS 预查寻
-- `preconnect` DNS 预连接
+## prefetch / dns-prefetch
+- preload 优先加载
+- prefetch 空闲时加载
+- dns-prefetch DNS 预查寻
+- preconnect DNS 预连接
 
 ## 网页多标签通讯
-- `WebSocket `
-- `localStorage`
-- `SharedWorker` 
+- WebSocket
+- localStorage
+- SharedWorker
 
-## `new`
+## new
 ```js
 var stu = new Student('tao')
 
@@ -206,7 +206,7 @@ function Student(name) {
 }
 ```
 
-## `DOM` 结构转换为 `VNode`
+## DOM 结构转换为 VNode
 ```html
 <div id="div1" style="border: 1px solid ##ccc; padding: 10px;">
     <p>一行文字<a href="xxx.html" target="_blank">链接</a></p>
@@ -264,7 +264,7 @@ const vnode = {
 ## 类数组
 - 类似数组的对象
 - 使用数字作为属性名称
-- 需要具备 `length` 属性
+- 需要具备 length 属性
 - 类数组的设计目的是只让你遍历和访问下标
 
 ## 
