@@ -10,23 +10,17 @@
 - 陷阱
     - `indexOf` 不能识别数组中的 `NaN`
     - `includes` 可以识别数组中的 `NaN`
-- 实现
+
 ```js
 function isNaNVal(val) {
-    return Object.is(val, NaN);
+    return Object.is(val, NaN)
 }
 
 function isNaNVal(val) {
-    return val !== val;
+    return val !== val
 }
 
 function isNaNVal(val) {
     return typeof val === 'number' && isNaN(val)
-}
-
-if (!("isNaN" in Number)) {
-    Number.isNaN = function(val) {
-        return typeof val === 'number' && isNaN(val)
-    }
 }
 ```
