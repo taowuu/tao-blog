@@ -1,3 +1,4 @@
+```js
 const flatDeep = (array) => {
     let result = []
 
@@ -16,4 +17,5 @@ const flatDeep = (array) => {
 
 const array = [0, 1, 2, [[[3, 4]]]]
 
-console.log(flatDeep(array))
+console.log(flatDeep(array)) // [0, 1, 2, 3, 4]
+```
