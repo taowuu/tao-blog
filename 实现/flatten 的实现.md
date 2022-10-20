@@ -1,5 +1,5 @@
-# `flatten` 的实现
-- `concat` 不会更改现有数组
+# flatten 的实现
+- `concat()` 不会更改现有数组
 
 ```js
 const flatten = (arr) => {
