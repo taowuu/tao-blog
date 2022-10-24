@@ -32,6 +32,8 @@
 
 - [getType 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/getType%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
 
+- [new 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/new%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
 ## 布局
 - [Flex 粘性布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/Flex%20%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80.md)
 
