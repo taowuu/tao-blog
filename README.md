@@ -36,6 +36,11 @@
 
 - [LazyMan 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/LazyMan%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
 
+## 随笔
+- [创建数组的方式](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F.md)
+
+- [数据类型的判断方法](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95.md)
+
 ## 布局
 - [Flex 粘性布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/Flex%20%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80.md)
 
@@ -58,8 +63,3 @@
 - [Grid 多组合排列布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/Grid%20%E5%A4%9A%E7%BB%84%E5%90%88%E6%8E%92%E5%88%97%E5%B8%83%E5%B1%80.md)
 
 - [Grid 栅格布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/Grid%20%E6%A0%85%E6%A0%BC%E5%B8%83%E5%B1%80.md)
-
-## 随笔
-- [创建数组的方式](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F.md)
-
-- [数据类型的判断方法](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95.md)
