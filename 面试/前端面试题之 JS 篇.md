@@ -189,23 +189,6 @@ event.preventDefault()
 - localStorage
 - SharedWorker
 
-## new
-```js
-var stu = new Student('tao')
-
-function Student(name) {
-    // 创建临时对象保存 stu 的属性
-    var temp = {}
-    // 改变 this 指向
-    this = temp
-    // 改变原型
-    this.__proto__ = Student.prototype
-    this.name = name
-    // 然后返回 这个 stu
-    return this
-}
-```
-
 ## DOM 结构转换为 VNode
 ```html
 <div id="div1" style="border: 1px solid ##ccc; padding: 10px;">
