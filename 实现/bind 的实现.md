@@ -1,4 +1,4 @@
-# bind call apply 的实现
+# bind 的实现
 - 返回一个新函数
 - 绑定 this 和部分参数
 - 箭头函数无法绑定 this 只能绑定参数

@@ -1,14 +1,13 @@
-Function.prototype.myBind = function() {
-    // 将参数拆解为数组
-    const args = Array.prototype.slice.call(arguments)
-    // 取出要绑定的 this
-    const _this = args.shift()
-    // 取出原 this
-    const self = this
-    // 返回一个函数
-    return function() {
-        self.apply(_this, args)
-    }
+Function.prototype.myApply = function(context, args) {
+    // 不会出现属性名称的覆盖
+    const fnKey = Symbol()
+    // this 就是当前的函数
+    context[fnKey] = this
+    // 绑定了 this
+    const res = context[fnKey](...args) 
+    delete context[fnKey] 
+
+    return res
 }
 
 const tao1 = {
@@ -22,11 +21,10 @@ const f1 = function(a, b, c) {
     console.log('this: ', this)
     console.log(a, b, c)
 }
-const f2 = f1.myBind(tao2, 4, 5, 6)
 
 f1(1, 2, 3) 
-// this: whindow
+// this: window
 // 1 2 3
-f2() 
-// this:  { name: 'tao2' }
+f1.myApply(tao2, [4, 5, 6])
+// this:  { name: 'tao2', [Symbol()]: [Function: f1] }
 // 4 5 6
