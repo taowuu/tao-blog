@@ -1,3 +1,9 @@
+# bind call apply 的实现
+- 返回一个新函数
+- 绑定 this 和部分参数
+- 箭头函数无法绑定 this 只能绑定参数
+
+```js
 Function.prototype.myBind = function() {
     // 将参数拆解为数组
     const args = Array.prototype.slice.call(arguments)
@@ -30,3 +36,4 @@ f1(1, 2, 3)
 f2() 
 // this:  { name: 'tao2' }
 // 4 5 6
+```
