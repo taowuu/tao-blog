@@ -1,3 +1,9 @@
+# EventBus 的实现
+- on 和 once 注册函数存储起来
+- emit 找到对应函数触发
+- off 找到并删除对于函数
+
+```js
 class EventBus {
     constructor() {
         // 单次事件分开存储
@@ -68,3 +74,4 @@ e.emit('key1', 10, 20) // 触发 fn1 fn2 fn3
 e.off('key1', fn1)
 
 e.emit('key1', 100, 200) // 触发 fn2
+```
