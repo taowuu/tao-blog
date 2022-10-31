@@ -1,3 +1,9 @@
+# Array.prototype.entries 是什么
+
+## entries 返回一个迭代器
+- 返回的 value 为带有下标和值的数组
+
+```js
 const arr = [1, 2, 3, 4, 5]
 
 const iterator = arr.entries()
@@ -9,12 +15,10 @@ console.log(iterator.next()) // { value: Array [2, 3], done: false }
 console.log(iterator.next()) // { value: Array [3, 4], done: false }
 console.log(iterator.next()) // { value: Array [4, 5], done: false }
 console.log(iterator.next()) // { value: undefined, done: true }
+```
 
-// 数组是一个特殊的对象
-// key 是从 0 开始递增的数组
-// 按顺序对应数组的每个元素
-
-// next
+## next 的执行流程
+```js
 const arr = [1, 2, 3, 4, 5]
 
 const newArr = []
@@ -27,9 +31,10 @@ for(let i = 0; i < arr.length + 1; i++) {
 
 console.log(newArr)
 // [Array [0, 1], Array [1, 2], Array [2, 3], Array [3, 4], Array [4, 5]]
+```
 
-
-// 二维数组排序
+## 二维数组排序
+```js
 const _arr = [
     [3, 2, 1],
     [354, 11,56]
@@ -55,18 +60,10 @@ function sorArr(arr) {
 
 console.log(sorArr(_arr))
 // [Array [1, 2, 3], Array [11, 56, 354]]
+```
 
-// for of 用于可迭代对象
-const arr = [1, 2, 3, 4, 5]
-const iterator = arr.entries()
-
-for(let c of iterator) {
-    const [i, v] = c
-    
-    console.log(i, v)
-}
-
-// 将类数组转化为迭代器
+## of 将类数组转化为迭代器
+```js
 const o = {
     0: 1,
     1: 2,
@@ -78,4 +75,4 @@ const o = {
 for(let v of Array.from(o)) {
     console.log(v)
 }
-
+```
