@@ -1,5 +1,35 @@
 # tao-fe-blog
 
+## 随笔
+- [创建数组的方式](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F.md)
+
+- [数据类型的判断方法](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95.md)
+
+
+## 实现
+- [isNaN 的实现](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%AE%9E%E7%8E%B0/isNaN%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [flatten 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/flatten%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [getType 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/getType%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [new 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/new%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [LazyMan 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/LazyMan%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [curry 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/curry%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [instanceof 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/instanceof%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [bind 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/bind%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [call apply 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/call%20apply%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [Ajax 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/Ajax%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+- [EventBus 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/EventBus%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
+
+
 ## 面试
 - [前端面试题之 CSS 篇](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9D%A2%E8%AF%95/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%20CSS%20%E7%AF%87.md)
 
@@ -25,33 +55,6 @@
 
 - [前端面试题之 运行结果 篇](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9D%A2%E8%AF%95/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%20%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%20%E7%AF%87.md)
 
-## 实现
-- [isNaN 的实现](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%AE%9E%E7%8E%B0/isNaN%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [flatten 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/flatten%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [getType 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/getType%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [new 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/new%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [LazyMan 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/LazyMan%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [curry 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/curry%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [instanceof 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/instanceof%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [bind 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/bind%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [call apply 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/call%20apply%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [Ajax 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/Ajax%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-- [EventBus 的实现](https://github.com/taowuu/tao-blog/blob/main/%E5%AE%9E%E7%8E%B0/EventBus%20%E7%9A%84%E5%AE%9E%E7%8E%B0.md)
-
-## 随笔
-- [创建数组的方式](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F.md)
-
-- [数据类型的判断方法](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95.md)
 
 ## 布局
 - [Flex 粘性布局](https://github.com/taowuu/tao-fe-blog/blob/main/%E5%B8%83%E5%B1%80/Flex%20%E7%B2%98%E6%80%A7%E5%B8%83%E5%B1%80.md)
