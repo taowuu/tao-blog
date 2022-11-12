@@ -1,6 +1,8 @@
 # tao-blog
 
 ## 随笔
+- [强缓存和协商缓存]()
+
 - [前端宿主浏览器](https://github.com/taowuu/tao-blog/blob/main/%E9%9A%8F%E7%AC%94/%E5%89%8D%E7%AB%AF%E5%AE%BF%E4%B8%BB%E6%B5%8F%E8%A7%88%E5%99%A8.md)
 
 - [创建数组的方式](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F.js)
