@@ -58,5 +58,3 @@
 - 文档解析完成 DOMContentLoaded 事件
 - 进入事件驱动阶段
 - async script 加载执行完毕，img 等资源加载完毕，onload事件触发
-
-
