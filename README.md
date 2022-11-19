@@ -15,4 +15,4 @@
 
 - [数据类型的判断方法](https://github.com/taowuu/tao-blog/blob/main/blog/typeof.js)
 
-- [Array.prototype.entries 是什么](https://github.com/taowuu/tao-fe-blog/blob/main/blog/array-entries.js)
+- [数组 entries](https://github.com/taowuu/tao-fe-blog/blob/main/blog/array-entries.js)
