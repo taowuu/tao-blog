@@ -1,7 +1,9 @@
 # tao-blog
 
 ## 随笔
-- [promise api 实现](https://github.com/taowuu/tao-blog/blob/main/blog/promise-api.js)
+- [Axios 拦截器](https://github.com/taowuu/tao-blog/blob/main/blog/axios-interceptors.js)
+
+- [Promise API 实现](https://github.com/taowuu/tao-blog/blob/main/blog/promise-api.js)
 
 - [强缓存和协商缓存](https://github.com/taowuu/tao-blog/blob/main/blog/vue2-defect.md)
 
@@ -13,4 +15,4 @@
 
 - [数据类型的判断方法](https://github.com/taowuu/tao-blog/blob/main/blog/typeof.js)
 
-- [Array.prototype.entries 是什么](https://github.com/taowuu/tao-fe-blog/blob/main/%E9%9A%8F%E7%AC%94/Array.prototype.entries%20%E6%98%AF%E4%BB%80%E4%B9%88.js)
+- [Array.prototype.entries 是什么](https://github.com/taowuu/tao-fe-blog/blob/main/blog/array-entries.js)
