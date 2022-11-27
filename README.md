@@ -1,6 +1,8 @@
 # tao-blog
 
 ## 随笔
+- [keep-alive 使用场景和原理](https://github.com/taowuu/tao-blog/blob/main/blog/keep-alive.md)
+
 - [Axios 拦截器](https://github.com/taowuu/tao-blog/blob/main/blog/axios-interceptors.js)
 
 - [Promise API 实现](https://github.com/taowuu/tao-blog/blob/main/blog/promise-api.js)
