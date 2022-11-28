@@ -4,7 +4,7 @@
 - 不能使用 Composition API
 - 它只是一个接受一些 prop 的函数
 - 渲染快
-- 
+
 ## 基本写法
 ```js
 Vue.component('my-component', {
