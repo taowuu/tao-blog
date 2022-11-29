@@ -9,7 +9,7 @@
 
 - [Promise API 实现](https://github.com/taowuu/tao-blog/blob/main/blog/promise-api.js)
 
-- [强缓存和协商缓存](https://github.com/taowuu/tao-blog/blob/main/blog/vue2-defect.md)
+- [Vue2 响应式缺陷](https://github.com/taowuu/tao-blog/blob/main/blog/vue2-defect.md)
 
 - [强缓存和协商缓存](https://github.com/taowuu/tao-blog/blob/main/blog/browser-cache.md)
 
