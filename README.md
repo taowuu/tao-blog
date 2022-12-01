@@ -1,6 +1,8 @@
 # tao-blog
 
 ## 随笔
+- [Webpack 打包优化](https://github.com/taowuu/tao-blog/blob/main/blog/webpack-optimize.md)
+
 - [Vue 函数式组件](https://github.com/taowuu/tao-blog/blob/main/blog/Vue.component.md)
 
 - [keep-alive 使用场景和原理](https://github.com/taowuu/tao-blog/blob/main/blog/keep-alive.md)
