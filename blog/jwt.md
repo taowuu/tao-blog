@@ -16,7 +16,7 @@
 	  base64UrlEncode(header) + "." +
 	  base64UrlEncode(payload),
 	  secret)
-```
+	```
 
 ## JWT 的使用方式
 - 放在 HTTP 请求的头信息 Authorization 字段
@@ -24,4 +24,3 @@
 
 ## JWT 的缺陷
 - 由于服务器不保存 session 状态，因此无法在使用过程中废止某个 token，或者更改 token 的权限
-- 
