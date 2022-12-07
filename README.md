@@ -1,6 +1,8 @@
 # tao-blog
 
 ## 随笔
+- [JSON Web Token](https://github.com/taowuu/tao-blog/blob/main/blog/jwt.md)
+
 - [vue-router 路由钩子](https://github.com/taowuu/tao-blog/blob/main/blog/router-before.md)
 
 - [Webpack 打包优化](https://github.com/taowuu/tao-blog/blob/main/blog/webpack-optimize.md)
