@@ -1,7 +1,7 @@
 # tao-blog
 
 ## 随笔
-- [JSON Web Token](https://github.com/taowuu/tao-blog/blob/main/blog/jwt.md)
+- [JSON Web Token 认证](https://github.com/taowuu/tao-blog/blob/main/blog/jwt.md)
 
 - [vue-router 路由钩子](https://github.com/taowuu/tao-blog/blob/main/blog/router-before.md)
 
