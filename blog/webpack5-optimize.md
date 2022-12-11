@@ -15,3 +15,10 @@ module.exports = {
 }
 ```
 
+# 并行同步作业
+## 多进程处理
+- HappyPack： 多进程方式加载Loader，停止更新。
+- Thread-loader： 多进程资源加载，官方方案
+- Parallel-Webpack: 多进程方式运行Webpack构建实例
+- 支持多进程的Loader和Plugin：比如：TerserWebpackPlugin的多进程模式
+
