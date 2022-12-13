@@ -22,3 +22,8 @@ module.exports = {
 - Parallel-Webpack: 多进程方式运行Webpack构建实例
 - 支持多进程的Loader和Plugin：比如：TerserWebpackPlugin的多进程模式
 
+# 高效作业 - ESBuild编译器
+- 由于JS不适合计算密集型作业。所以这部分最好能够找到更高效的执行环境。目前比较成熟的方案是使用高效编译器
+- 使用ESBuild 或SWC 负责 Typescript 的编译
+- 使用ESBuild 或 SWC 复杂压缩丑化
+
