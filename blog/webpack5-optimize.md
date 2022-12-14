@@ -27,3 +27,36 @@ module.exports = {
 - 使用ESBuild 或SWC 负责 Typescript 的编译
 - 使用ESBuild 或 SWC 复杂压缩丑化
 
+# 精简作业
+- 开发阶段禁止产物优化
+```js
+module.exports = (base) => {
+  base.optimization = {
+    removeAvailableModules: false,
+    removeEmptyChunks: false, //
+    splitChunks: false, // 代码分包
+    minimize: false, //代码压缩
+    concatenateModules: false,
+    usedExports: false, // Treeshaking
+  };
+};
+```
+- 非必要不产生 SourceMap
+- 约束执行范围 - exclude
+```js
+module.exports = (base) => {
+  base.module.rules.map((v) => {
+    v.exclude = /node_modules/;
+  });
+  return base;
+};
+```
+- NoParse 功能跳过编译
+ - 以Vue3为例，Vue3已经提供了打包完成的 esm 文件。这个时候没必要重复进行依赖打包。所以可以通过 no-parse跳过。
+ ```js
+ const path = require("path");
+module.exports = (base) => {
+  base.module.noParse = /(^vue$)|(^pinia$)|(^vue-router$)/;
+  return base;
+};
+```
