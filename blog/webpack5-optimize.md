@@ -52,7 +52,7 @@ module.exports = (base) => {
 };
 ```
 - NoParse 功能跳过编译
- - 以Vue3为例，Vue3已经提供了打包完成的 esm 文件。这个时候没必要重复进行依赖打包。所以可以通过 no-parse跳过。
+ - 以Vue3为例，Vue3已经提供了打包完成的 esm 文件。这个时候没必要重复进行依赖打包。所以可以通过 no-parse 跳过。
  ```js
  const path = require("path");
 module.exports = (base) => {
