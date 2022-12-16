@@ -1,7 +1,7 @@
 # tao-blog
 
 ## 随笔
-- [Webpack5.0 优化指南](https://github.com/taowuu/tao-blog/blob/main/blog/webpack5-optimize.md)
+- [Webpack5.0 优化](https://github.com/taowuu/tao-blog/blob/main/blog/webpack5-optimize.md)
 
 - [JSON Web Token 认证](https://github.com/taowuu/tao-blog/blob/main/blog/jwt.md)
 
