@@ -3,7 +3,7 @@
 ## 随笔
 - [前端性能优化](https://github.com/taowuu/tao-blog/blob/main/blog/fe-optimize.md)
 
--[剖析 JavaScript 的执行机制](https://github.com/taowuu/tao-blog/blob/main/blog/js-run.md)
+- [剖析 JavaScript 的执行机制](https://github.com/taowuu/tao-blog/blob/main/blog/js-run.md)
 
 - [Webpack5.0 优化](https://github.com/taowuu/tao-blog/blob/main/blog/webpack5-optimize.md)
 
