@@ -1,6 +1,8 @@
 # tao-blog
 
 ## 随笔
+- [2022-12-23 起居家记录]()
+
 - [前端性能优化](https://github.com/taowuu/tao-blog/blob/main/blog/fe-optimize.md)
 
 - [剖析 JavaScript 的执行机制](https://github.com/taowuu/tao-blog/blob/main/blog/js-run.md)
