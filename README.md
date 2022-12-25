@@ -1,7 +1,7 @@
 # tao-blog
 
 ## 随笔
-- [JS 高级程序设计读书笔记]()
+- [JS 高级程序设计读书笔记](https://github.com/taowuu/tao-blog/blob/main/blog/js-program-design.md)
 
 - [前端性能优化](https://github.com/taowuu/tao-blog/blob/main/blog/fe-optimize.md)
 
