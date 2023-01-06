@@ -12,3 +12,14 @@
     - callee 属性指向拥有 arguments 的函数 
 - this 引用的是函数据以执行的环境对象
     - caller 属性保存调用当前函数的函数的引用
+# 包装基本类型
+```js
+var s1 = 'aaa'
+// 等价于
+// 构造函数
+var s1 = new String('aaa')
+s1 = null
+转型函数
+var s1 = String(s1)
+```
+
