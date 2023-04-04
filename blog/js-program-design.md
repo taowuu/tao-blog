@@ -23,5 +23,6 @@ s1 = null
 转型函数
 var s1 = String(s1)
 ```
+1
 
 
