@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>手写可拖曳div</title>
+    <style>
+      /* 设置 div 的样式 */
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        cursor: move;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 创建一个 div -->
+    <div id="box"></div>
+  </body>
+  <script>
+    // 获取 div 元素
+    let box = document.getElementById("box");
+    // 定义变量存储鼠标和 div 的初始位置
+    let startX, startY, boxX, boxY;
+    // 给 div 添加 mousedown 事件监听器
+    box.addEventListener("mousedown", function (e) {
+      // 阻止默认行为，避免选中文字
+      e.preventDefault();
+      // 记录鼠标的初始位置
+      startX = e.clientX;
+      startY = e.clientY;
+      // 记录 div 的初始位置
+      boxX = Number(box.style.left);
+      boxY = Number(box.style.top);
+      // 给 document 添加 mousemove 和 mouseup 事件监听器
+      document.addEventListener("mousemove", move);
+      document.addEventListener("mouseup", up);
+    });
+    // 定义 move 函数，处理鼠标移动时的逻辑
+    function move(e) {
+      // 计算鼠标的移动距离
+      let deltaX = e.clientX - startX;
+      let deltaY = e.clientY - startY;
+      // 计算 div 的新位置
+      let newX = boxX + deltaX;
+      let newY = boxY + deltaY;
+      console.log(boxX)
+
+      // 更新 div 的 style 属性
+      box.style.left = newX + "px";
+      box.style.top = newY + "px";
+    }
+    // 定义 up 函数，处理鼠标松开时的逻辑
+    function up(e) {
+      // 移除 document 上的 mousemove 和 mouseup 事件监听器
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseup", up);
+    }
+  </script>
+</html>
